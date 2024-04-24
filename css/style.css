@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
@@ -8,6 +10,8 @@ html {
 
 nav {
   height: 50px;
+  width: 100%;
+  z-index: 99999;
 }
 
 header {
@@ -16,6 +20,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 header div h1 {
@@ -32,11 +38,12 @@ header div select {
 }
 
 main {
-  margin: auto 96px;
+  margin: auto 92px;
 }
 
 main .title {
-  margin: 30px 0px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 main .title h4,h2 {
@@ -47,23 +54,35 @@ main .title h4,h2 {
 main .cardholder {
   display: flex;
   flex-wrap: wrap;
+  gap: 8px 8px;
 }
 
 main .cardholder .card {
-  margin: 0px 4px;
+  margin: 8px;
+}
+
+main .cardholder a {
+  text-decoration: none;
+  color: black;
+  border-radius: 16px;
+  background-color: bisque;
+}
+
+main .cardholder a:hover {
+  background-color: rgb(224, 217, 217);
 }
 
 main .cardholder .card img {
   width: 405px;
   height: 220px;
-  border-radius: 16px;
+  border-radius: 12px;
 }
 
 main .cardholder .card .cardtext {
   margin: 16px 0px;
 }
 
-main .cardholder .card .cardtext h5, h6, p {
+main .cardholder .card .cardtext h4, h6, p {
   margin: 2px 0px;
 }
 
@@ -77,4 +96,26 @@ main .cardholder .card .cardtext .cardtitle .rating {
   padding: 4px;
   background-color: aqua;
   border-radius: 8px;
+}
+
+main .cardholder .card .cardtext p {
+  font-size: small;
+}
+
+footer {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div {
+  margin: 20px;
+  background-color: aqua;
+  border-radius: 100000px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
