@@ -2,7 +2,7 @@
   --text: #000202;
   --background: #f3efe0;
   --primary: #ffffff;
-  --accent: #b9d1f1;
+  --accent: #ccc;
 }
 
 * {
@@ -67,13 +67,6 @@ nav {
 
 .selected-value {
   text-align: left;
-}
-
-.arrow {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid #000;
-  transition: transform ease-in-out 0.3s;
 }
 
 .select-dropdown {
@@ -150,10 +143,6 @@ nav {
 }
 
 /* interactivity */
-
-.custom-select.active .arrow {
-  transform: rotate(180deg);
-}
 
 .custom-select.active .select-dropdown {
   opacity: 1;
@@ -241,6 +230,49 @@ main {
               height: 16px;
               margin-right: 4px;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {  
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999;
+    flex-direction: column;
+    height: auto;
+
+    .logo {
+      margin-left: 0px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .custom-select {
+      margin: 0px;
+      margin-bottom: 12px;
+      width: 75%;
+    }
+  }
+
+  main {
+    margin: 140px 40px 20px 40px;
+
+    .cardholder {
+      a {
+        .card {
+          flex-direction: column;
+          
+          img {
+            width: 100%;
+            margin: 0px;
+          }
+
+          .cardtext {
+            margin: 8px;
           }
         }
       }
