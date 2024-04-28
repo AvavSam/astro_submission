@@ -2,7 +2,7 @@
   --text: #000202;
   --background: #f3efe0;
   --primary: #ffffff;
-  --accent: #b9d1f1;
+  --accent: #ccc;
 }
 
 * {
@@ -20,17 +20,18 @@ html {
 nav {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 80px;
   width: 100%;
   position: fixed;
   top: 0;
-}
+  background-color: var(--background);
 
-nav .logo {
-  margin-left: 96px;
-
-  span {
-    color: red;
+  .logo {
+    margin-left: 96px;
+    
+    span {
+      color: red;
+    }
   }
 }
 
@@ -43,25 +44,140 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px 40px 0px 40px;
+  margin: 80px 40px 0px 40px;
   padding: 0px;
   border-radius: 24px;
 
   div{
+    width: 500px;
+
     h1{
       text-align: center;
       margin-bottom: 10px;
     }
 
-    select {
-      width: 500px;
-      height: 50px;
-      font-size: larger;
-      text-align: center;
+    .custom-select {
+      position: relative;
+      width: 100%;
+      font-size: 1.15rem;
+      color: #000;
+      margin-right: 96px;
+      justify-content: center;
+    }
+    
+    .select-button {
+      width: 100%;
+      font-family: "Urbanist", sans-serif;
+      font-size: 1rem;
+      background-color: var(--primary);
+      padding: 0.675em 1em;
+      border: 2px solid black;
       border-radius: 16px;
+      cursor: pointer;
+    
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .selected-value {
+      text-align: left;
+    }
+    
+    .arrow {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid #000;
+      transition: transform ease-in-out 0.3s;
+    }
+    
+    .select-dropdown {
+      position: absolute;
+      list-style: none;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      border: 1px solid #caced1;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      transition: 0.5s ease;
+    
+      transform: scaleY(0);
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    .select-dropdown:focus-within {
+      box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+    }
+    
+    .select-dropdown li {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .select-dropdown li label a {
+      width: 100%;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .select-dropdown li label a img {
+      width: 32px;
+    }
+    
+    .select-dropdown::-webkit-scrollbar {
+      width: 7px;
+    }
+    .select-dropdown::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 25px;
+    }
+    
+    .select-dropdown::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 25px;
+    }
+    
+    .select-dropdown li:hover,
+    .select-dropdown input:checked ~ label {
+      background-color: #f2f2f2;
+    }
+    
+    .select-dropdown input:focus ~ label {
+      background-color: #dfdfdf;
+    }
+    
+    .select-dropdown input[type="radio"] {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+    }
+    
+    /* interactivity */
+    
+    .custom-select.active .arrow {
+      transform: rotate(180deg);
+    }
+    
+    .custom-select.active .select-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
     }
   }
 }
+
 
 main {
   margin: auto 92px;
@@ -91,11 +207,11 @@ main {
       color: black;
       border-radius: 16px;
       background-color: var(--primary);
+      border: black solid 2px;
     }
 
     a:hover {
       background-color: var(--accent);
-      color: white;
     }
 
     .card {
@@ -129,6 +245,11 @@ main {
             border-radius: 8px;
             display: inline-flex;
             font-size: medium;
+
+            box-icon {
+              height: 16px;
+              margin-right: 4px;
+            }
           }
         }
       }

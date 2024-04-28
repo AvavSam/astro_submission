@@ -6,8 +6,6 @@
     <title>Submission PT</title>
     <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,1,200" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
@@ -15,22 +13,42 @@
   <body>
     <nav>
       <div class="logo">
-        <h3>E<span>x</span>plore<span>/</span></h3>
+        <h2>E<span>x</span>plore<span>/</span></h2>
       </div>
     </nav>
 
     <header>
       <div>
         <h1>Mau Kemana Hari Ini?</h1>
-        <select name="kabupaten" id="">
-          <option value=".">Pilih Daerah</option>
-          <option value="palu">Kota Palu</option>
-          <option value="banggai">Kabupaten Banggai</option>
-          <option value="toli">Kabupaten Toli-Toli</option>
-          <option value="donggala">Kabupaten Donggala</option>
-          <option value="sigi">Kabupaten Sigi</option>
-          <option value="poso">Kabupaten Poso</option>
-        </select>
+        <div class="custom-select">
+          <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+            <span class="selected-value">Pilih Kabupaten</span>
+            <span class="arrow"></span>
+          </button>
+  
+          <ul class="select-dropdown" role="listbox" id="select-dropdown">
+            <li role="option">
+              <input type="radio" id="poso" name="kabupaten" />
+              <label for="poso"><a href="poso.html"><img src="assets/Poso.png" alt="">Kabupaten Poso</a></label>
+            </li>
+            <li role="option">
+              <input type="radio" id="bangkep" name="kabupaten" />
+              <label for="bangkep"><a href="bangkep.html"><img src="assets/bangkep.png" alt="">Kabupaten Banggai Kepulauan</a></label>
+            </li>
+            <li role="option">
+              <input type="radio" id="tolitoli" name="kabupaten" />
+              <label for="tolitoli"><a href="tolitoli.html"><img src="assets/Tolitoli.png" alt="">Kabupaten Toli-Toli</a></label>
+            </li>
+            <li role="option">
+              <input type="radio" id="donggala" name="kabupaten" />
+              <label for="donggala"><a href="donggala.html"><img src="assets/Donggala.png" alt="">Kabupaten Donggala</a></label>
+            </li>
+            <li role="option">
+              <input type="radio" id="sigi" name="kabupaten" />
+              <label for="sigi"><a href="sigi.html"><img src="assets/Sigi.png" alt="">Kabupaten Sigi</a></label>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -47,7 +65,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -62,7 +80,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -77,7 +95,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -92,7 +110,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -107,7 +125,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -122,7 +140,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -137,7 +155,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -152,7 +170,7 @@
               <div class="cardtitle">
                 <h4>Kampung Nelayan</h4>
                 <div class="rating">
-                  <span class="material-symbols-rounded"> star </span>
+                  <box-icon name='star' type='solid' size='cssSize' ></box-icon>
                   <h4>3.6/5</h4>
                 </div>
               </div>
@@ -172,5 +190,8 @@
         <img src="assets/ProgrammingTadulako.png" alt="" class="pt" width="32px" />
       </div>
     </footer>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
