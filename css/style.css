@@ -1,8 +1,9 @@
 :root {
-  --text: #000202;
-  --background: #f3efe0;
+  --text: #030816;
+  --background: #f8f8f8;
   --primary: #ffffff;
-  --accent: #ccc;
+  --accent: #242d32;
+  --shadow: #e3e8ef;
 }
 
 * {
@@ -29,7 +30,7 @@ nav {
 
   .logo {
     margin-left: 96px;
-    
+
     span {
       color: red;
     }
@@ -37,7 +38,7 @@ nav {
 }
 
 header {
-  background-image: url('/assets/beachAerialView(1).jpg');
+  background-image: url("/assets/beachAerialView(1).jpg");
   min-height: 100%;
   background-position: center;
   background-size: cover;
@@ -49,10 +50,10 @@ header {
   padding: 0px;
   border-radius: 24px;
 
-  div{
+  div {
     width: 500px;
 
-    h1{
+    h1 {
       text-align: center;
       margin-bottom: 10px;
     }
@@ -61,30 +62,29 @@ header {
       position: relative;
       width: 100%;
       font-size: 1.15rem;
-      color: #000;
       margin-right: 96px;
       justify-content: center;
     }
-    
+
     .select-button {
       width: 100%;
       font-family: "Urbanist", sans-serif;
       font-size: 1rem;
-      background-color: var(--primary);
+      background-color: var(--background);
       padding: 0.675em 1em;
-      border: 2px solid black;
+      border: 1px solid var(--shadow);
       border-radius: 16px;
       cursor: pointer;
-    
+
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    
+
     .selected-value {
       text-align: left;
     }
-    
+
     .select-dropdown {
       position: absolute;
       list-style: none;
@@ -98,16 +98,16 @@ header {
       max-height: 200px;
       overflow-y: auto;
       transition: 0.5s ease;
-    
+
       transform: scaleY(0);
       opacity: 0;
       visibility: hidden;
     }
-    
+
     .select-dropdown:focus-within {
       box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
     }
-    
+
     .select-dropdown li {
       position: relative;
       cursor: pointer;
@@ -115,7 +115,7 @@ header {
       gap: 1rem;
       align-items: center;
     }
-    
+
     .select-dropdown li label a {
       width: 100%;
       padding: 8px 10px;
@@ -125,11 +125,11 @@ header {
       align-items: center;
       text-decoration: none;
     }
-    
+
     .select-dropdown li label a img {
       width: 32px;
     }
-    
+
     .select-dropdown::-webkit-scrollbar {
       width: 7px;
     }
@@ -137,29 +137,29 @@ header {
       background: #f1f1f1;
       border-radius: 25px;
     }
-    
+
     .select-dropdown::-webkit-scrollbar-thumb {
       background: #ccc;
       border-radius: 25px;
     }
-    
+
     .select-dropdown li:hover,
     .select-dropdown input:checked ~ label {
       background-color: #f2f2f2;
     }
-    
+
     .select-dropdown input:focus ~ label {
       background-color: #dfdfdf;
     }
-    
+
     .select-dropdown input[type="radio"] {
       position: absolute;
       left: 0;
       opacity: 0;
     }
-    
+
     /* interactivity */
-    
+
     .custom-select.active .select-dropdown {
       opacity: 1;
       visibility: visible;
@@ -167,7 +167,6 @@ header {
     }
   }
 }
-
 
 main {
   margin: auto 92px;
@@ -178,7 +177,8 @@ main {
     color: var(--primary);
   }
 
-  h4, h2 {
+  h4,
+  h2 {
     margin-bottom: 0px;
     margin-top: 0px;
   }
@@ -198,12 +198,14 @@ main {
       color: black;
       border-radius: 16px;
       background-color: var(--primary);
-      border: black solid 2px;
+      border: var(--shadow) solid 1px;
+      filter: drop-shadow(6px 12px 4px #e3e8ef);
       width: 24%;
+      box-sizing: border-box;
     }
 
     a:hover {
-      background-color: var(--accent);
+      border: var(--accent) solid 1px;
     }
 
     .card {
@@ -211,17 +213,19 @@ main {
         width: 100%;
         height: 220px;
         border-radius: 12px;
+        object-fit: cover;
       }
 
       .cardtext {
         margin: 2px 0px 24px 0px;
 
-        h4, p {
+        h4,
+        p {
           margin: 2px 0px;
           align-items: center;
           display: flex;
         }
-        
+
         p {
           font-size: small;
           font-style: italic;
@@ -254,13 +258,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary);
+  background-color: var(--accent);
   margin: 30px 40px 0px 40px;
   border-radius: 24px 24px 0px 0px;
 
   div {
     margin: 20px;
-    background-color: var(--accent);
+    background-color: var(--primary);
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -274,10 +278,9 @@ footer {
   }
 }
 
-
 /* mobile media query */
 @media screen and (max-width: 767px) {
-  nav {  
+  nav {
     align-items: center;
     justify-content: center;
     z-index: 9999999;
@@ -307,6 +310,16 @@ footer {
             width: 100%;
             object-fit: cover;
           }
+        }
+      }
+    }
+  }
+
+  footer {
+    div {
+      a {
+        img {
+          height: 70px;
         }
       }
     }

@@ -1,8 +1,9 @@
 :root {
-  --text: #000202;
-  --background: #f3efe0;
+  --text: #030816;
+  --background: #f8f8f8;
   --primary: #ffffff;
-  --accent: #ccc;
+  --accent: #242d32;
+  --shadow: #e3e8ef;
 }
 
 * {
@@ -25,8 +26,9 @@ nav {
   position: fixed;
   top: 0;
   background-color: var(--background);
-  border-bottom: black solid 1px;
+  filter: drop-shadow(0px 2px 2px var(--shadow));
   justify-content: space-between;
+  z-index: 9999;
 
   .logo {
     margin-left: 96px;
@@ -34,7 +36,7 @@ nav {
     a {
       text-decoration: none;
     }
-    
+
     span {
       color: red;
     }
@@ -46,7 +48,6 @@ nav {
   width: 400px;
   max-width: 100%;
   font-size: 1.15rem;
-  color: #000;
   margin-right: 96px;
 }
 
@@ -56,7 +57,7 @@ nav {
   font-size: 1rem;
   background-color: var(--background);
   padding: 0.675em 1em;
-  border: 1px solid black;
+  border: 1px solid var(--accent);
   border-radius: 16px;
   cursor: pointer;
 
@@ -159,7 +160,8 @@ main {
     color: var(--primary);
   }
 
-  h4, h2 {
+  h4,
+  h2 {
     margin-bottom: 0px;
     margin-top: 0px;
   }
@@ -168,19 +170,21 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px 8px;
-    
+
     a {
       text-decoration: none;
       color: black;
       border-radius: 16px;
       background-color: var(--primary);
-      border: black solid 2px;
+      border: var(--shadow) solid 1px;
+      filter: drop-shadow(6px 12px 4px #e3e8ef);
+      box-sizing: border-box;
     }
 
     a:hover {
-      background-color: var(--accent);
+      border: var(--accent) solid 1px;
     }
-    
+
     .card {
       margin: 8px;
       display: flex;
@@ -192,7 +196,8 @@ main {
         width: 40%;
         height: 220px;
         border-radius: 12px;
-        margin-right: 20px;;
+        margin-right: 20px;
+        object-fit: cover;
       }
 
       .cardtext {
@@ -200,12 +205,13 @@ main {
         align-items: center;
         margin-right: 12px;
 
-        h4, p {
+        h4,
+        p {
           margin: 2px 0px;
           align-items: center;
           display: flex;
         }
-        
+
         .type {
           font-size: small;
           font-style: italic;
@@ -238,7 +244,7 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  nav {  
+  nav {
     align-items: center;
     justify-content: center;
     z-index: 9999999;
@@ -247,7 +253,7 @@ main {
 
     .logo {
       margin-left: 0px;
-      margin-top: 24px;
+      margin-top: 12px;
       margin-bottom: 8px;
     }
 
@@ -259,13 +265,13 @@ main {
   }
 
   main {
-    margin: 140px 40px 20px 40px;
+    margin: 130px 40px 20px 40px;
 
     .cardholder {
       a {
         .card {
           flex-direction: column;
-          
+
           img {
             width: 100%;
             margin: 0px;
