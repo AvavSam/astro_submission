@@ -1,0 +1,385 @@
+:root {
+  --text: #030816;
+  --background: #f8f8f8;
+  --primary: #ffffff;
+  --accent: #242d32;
+  --shadow: #e3e8ef;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  color: var(--text);
+}
+
+html {
+  font-family: "Urbanist", sans-serif;
+  background-color: var(--background);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--background);
+  filter: drop-shadow(0px 2px 2px var(--shadow));
+  justify-content: space-between;
+  z-index: 9999;
+
+  .logo {
+    margin-left: 96px;
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+      color: red;
+    }
+  }
+}
+
+.custom-select {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+  font-size: 1.15rem;
+  color: #000;
+  margin-right: 96px;
+}
+
+.select-button {
+  width: 100%;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1rem;
+  background-color: var(--background);
+  padding: 0.675em 1em;
+  border: 1px solid black;
+  border-radius: 16px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selected-value {
+  text-align: left;
+}
+
+.select-dropdown {
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  transition: 0.5s ease;
+
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select-dropdown:focus-within {
+  box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+}
+
+.select-dropdown li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.select-dropdown li label a {
+  width: 100%;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+}
+
+.select-dropdown li label a img {
+  width: 32px;
+}
+
+.select-dropdown::-webkit-scrollbar {
+  width: 7px;
+}
+.select-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.select-dropdown li:hover,
+.select-dropdown input:checked ~ label {
+  background-color: #f2f2f2;
+}
+
+.select-dropdown input:focus ~ label {
+  background-color: #dfdfdf;
+}
+
+.select-dropdown input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+/* interactivity */
+
+.custom-select.active .select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+main {
+  margin: 100px 92px 30px 92px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: var(--primary);
+  }
+
+  .rating {
+    align-items: center;
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+
+    box-icon {
+      height: 16px;
+      margin-right: 4px;
+      --box-icon-color: yellow;
+    }
+  }
+
+  h4,
+  h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cardholder {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 8px;
+
+    /* a {
+      text-decoration: none;
+      color: black;
+      border-radius: 16px;
+      background-color: var(--primary);
+      border: black solid 2px;
+    } */
+
+    /* a:hover {
+      background-color: var(--accent);
+    }
+     */
+    .card {
+      /* margin: 8px; */
+      display: flex;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      /* img {
+        width: 100%;
+        height: 375px;
+        border-radius: 12px;
+        margin: 10px 0;
+        object-fit: cover;
+      } */
+
+      /* Slideshow container */
+      .slideshow-container {
+        width: 100%;
+        height: 375px;
+      }
+      
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+        width: 100%;
+        height: 375px;
+        
+        img {
+          border-radius: 12px;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.cardtext {
+  display: flex;
+  width: 100%;
+  /* align-items: center; */
+
+  h4,
+  p {
+    /* align-items: center; */
+    display: flex;
+  }
+
+  .type {
+    font-size: small;
+    font-style: italic;
+  }
+
+  .desc {
+    text-decoration: solid;
+    margin-right: 20px;
+    padding: 18px;
+    text-align: justify;
+    font-size: 1.1rem;
+    background-color: var(--primary);
+    border: var(--shadow) solid 1px;
+    filter: drop-shadow(6px 12px 4px #e3e8ef);
+    border-radius: 12px;
+    height: fit-content;
+    min-height: 300px;
+  }
+
+  .maps iframe {
+    width: 350px;
+    height: 300px;
+    border-radius: 12px;
+    border: var(--shadow) solid 1px;
+    filter: drop-shadow(6px 12px 4px #e3e8ef);
+  }
+
+  .cardtitle {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    align-items: center;
+    justify-content: center;
+    z-index: 9999999;
+    flex-direction: column;
+    height: auto;
+
+    .logo {
+      margin-left: 0px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+    }
+
+    .custom-select {
+      margin: 0px;
+      margin-bottom: 12px;
+      width: 75%;
+    }
+  }
+
+  main {
+    margin: 140px 40px 20px 40px;
+
+    .title {
+      flex-direction: column;
+
+      .rating {
+        padding: 0px;
+      }
+    }
+
+    .cardholder {
+      a {
+        .card {
+          flex-direction: column;
+
+          img {
+            width: 100%;
+            margin: 0px;
+          }
+
+          .cardtext {
+            margin: 8px;
+          }
+        }
+      }
+    }
+
+    .cardtext {
+      flex-direction: column;
+      margin: 0px;
+      padding: 0px;
+
+      .desc {
+        margin: 0px 0px 10px 0px;
+      }
+
+      .maps {
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
