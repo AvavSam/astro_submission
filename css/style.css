@@ -1,6 +1,6 @@
 :root {
   --text: #030816;
-  --background: #ffff;
+  --background: #f8f8f8;
   --primary: #ffffff;
   --accent: #242d32;
   --shadow: #e3e8ef;
@@ -134,12 +134,12 @@ header {
       width: 7px;
     }
     .select-dropdown::-webkit-scrollbar-track {
-      background: #ccc;
+      background: #f1f1f1;
       border-radius: 25px;
     }
 
     .select-dropdown::-webkit-scrollbar-thumb {
-      background: red;
+      background: #ccc;
       border-radius: 25px;
     }
 
@@ -254,26 +254,64 @@ main {
 }
 
 footer {
-  height: 300px;
+  min-height: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-color: var(--accent);
   margin: 30px 40px 0px 40px;
   border-radius: 24px 24px 0px 0px;
 
-  div {
-    margin: 20px;
-    background-color: var(--primary);
-    border-radius: 24px;
+  .explore {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 100px;
+    }
+
+    p, strong {
+      color: var(--primary);
+    }
+
+    .social {
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  .logocontainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 24px;
 
-    a {
+    .hmc,
+    .pt {
+      padding: 5px;
+      background-color: var(--primary);
+      border-radius: 12px;
+      
       img {
-        height: 80px;
+        height: 60px;
       }
+    }
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h4 {
+      color: var(--primary);
+      font-size: large;
+    }
+    
+    a {
+      color: var(--primary);
+      font-size: small;
     }
   }
 }
@@ -316,12 +354,11 @@ footer {
   }
 
   footer {
-    div {
-      a {
-        img {
-          height: 70px;
-        }
-      }
+    padding: 50px 20px;
+    gap: 50px;
+    
+    .logocontainer {
+      display: none;
     }
   }
 }
