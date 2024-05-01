@@ -1,6 +1,6 @@
 :root {
   --text: #030816;
-  --background: #f8f8f8;
+  --background: #ffff;
   --primary: #ffffff;
   --accent: #242d32;
   --shadow: #e3e8ef;
@@ -90,7 +90,7 @@ header {
       list-style: none;
       width: 100%;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      background-color: #fff;
+      background-color: #ffffff;
       border: 1px solid #caced1;
       border-radius: 4px;
       padding: 10px;
@@ -134,12 +134,12 @@ header {
       width: 7px;
     }
     .select-dropdown::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: #ccc;
       border-radius: 25px;
     }
 
     .select-dropdown::-webkit-scrollbar-thumb {
-      background: #ccc;
+      background: red;
       border-radius: 25px;
     }
 

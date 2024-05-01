@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kabupaten Poso</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/wisata.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <h2>E<span>x</span>plore<span>/</span></h2>
+        </a>
+      </div>
+      <div class="custom-select">
+        <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+          <span class="selected-value">Pilih Kabupaten</span>
+          <box-icon name="search"></box-icon>
+        </button>
+
+        <ul class="select-dropdown" role="listbox" id="select-dropdown">
+          <li role="option">
+            <input type="radio" id="poso" name="kabupaten" />
+            <label for="poso"
+              ><a href="poso.html"><img src="assets/Poso.png" alt="" />Kabupaten Poso</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="bangkep" name="kabupaten" />
+            <label for="bangkep"
+              ><a href="bangkep.html"><img src="assets/bangkep.png" alt="" />Kabupaten Banggai Kepulauan</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="tolitoli" name="kabupaten" />
+            <label for="tolitoli"
+              ><a href="tolitoli.html"><img src="assets/Tolitoli.png" alt="" />Kabupaten Toli-Toli</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="donggala" name="kabupaten" />
+            <label for="donggala"
+              ><a href="donggala.html"><img src="assets/Donggala.png" alt="" />Kabupaten Donggala</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="sigi" name="kabupaten" />
+            <label for="sigi"
+              ><a href="sigi.html"><img src="assets/Sigi.png" alt="" />Kabupaten Sigi</a></label
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- CONTENT -->
+    <main>
+      <div class="title">
+        <div class="judul">
+          <h4>Kabupaten Poso</h4>
+          <h2>Air Terjun Saluopa</h2>
+        </div>
+        <div class="rating">
+          <box-icon name="star" type="solid" size="cssSize"></box-icon>
+          <h4>4.7/5</h4>
+        </div>
+      </div>
+
+      <div class="cardholder">
+        <!-- bungkusan box 1, 2-->
+        <div class="card">
+          <!-- box 1 -->
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="assets/airTerjun.jpg"/>
+            </div>
+
+            <div class="mySlides fade">
+              <img src="assets/saluopa4.png"/>
+            </div>
+
+            <div class="mySlides fade">
+              <img src="assets/saluopa5.png"/>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="cardtext">
+        <p class="desc">
+          Air Terjun Saluopa adalah sebuah air terjun yang terletak di Tonusu, Pamona Puselemba, Kabupaten Poso, Sulawesi Tengah. Air terjun ini berjarak kurang lebih sekitar 12 kilometer sebelah barat Kota Tentena. Air terjun ini memiliki 12 tingkat, dan di setiap tingkat terdapat tangga yang terbuat dari batu yang berguna bagi wisatawan untuk akses ke tingkatan air terjun. Air terjun Saluopa bersumber dari mata air yang mengalir dari puncak gunung dengan ketinggian 25 meter. Air terjun ini melewati batuan gunung sebanyak 12 tingkatan yang mengalir hingga ke tingkat paling bawah, yang berakhir di sungai kecil desa Leboni.
+          <br />
+          <br />
+        </p>
+        <div class="maps">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.9531590820748!2d120.53842417472545!3d-1.7520083982318513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8e42636e2cc011%3A0x76dd4b9ee4e8a9ce!2sAir%20Terjun%20Saluopa!5e0!3m2!1sid!2sid!4v1714546904176!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <!-- CONTENT END -->
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/wisata.js"></script>
+  </body>
+</html>
