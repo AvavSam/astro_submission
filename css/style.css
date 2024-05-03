@@ -1,6 +1,6 @@
 :root {
   --text: #030816;
-  --background: #ffff;
+  --background: #f8f8f8;
   --primary: #ffffff;
   --accent: #242d32;
   --shadow: #e3e8ef;
@@ -26,6 +26,7 @@ nav {
   position: fixed;
   top: 0;
   background-color: var(--background);
+  filter: drop-shadow(0px 2px 2px var(--shadow));
   z-index: 99999;
 
   .logo {
@@ -38,7 +39,7 @@ nav {
 }
 
 header {
-  background-image: url("/assets/beachAerialView(1).jpg");
+  background: linear-gradient(0deg, rgba(36,45,50,1) 0%, rgba(36,45,50,0.2) 35%), url("/assets/beachAerialView(1).jpg");
   min-height: 100%;
   background-position: center;
   background-size: cover;
@@ -46,7 +47,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 80px 40px 0px 40px;
+  margin: 90px 40px 0px 40px;
   padding: 0px;
   border-radius: 24px;
 
@@ -56,6 +57,7 @@ header {
     h1 {
       text-align: center;
       margin-bottom: 10px;
+      color: var(--primary);
     }
 
     .custom-select {
@@ -134,12 +136,12 @@ header {
       width: 7px;
     }
     .select-dropdown::-webkit-scrollbar-track {
-      background: #ccc;
+      background: #f1f1f1;
       border-radius: 25px;
     }
 
     .select-dropdown::-webkit-scrollbar-thumb {
-      background: red;
+      background: #ccc;
       border-radius: 25px;
     }
 
@@ -254,26 +256,64 @@ main {
 }
 
 footer {
-  height: 300px;
+  min-height: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-color: var(--accent);
   margin: 30px 40px 0px 40px;
   border-radius: 24px 24px 0px 0px;
 
-  div {
-    margin: 20px;
-    background-color: var(--primary);
-    border-radius: 24px;
+  .explore {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 100px;
+    }
+
+    p, strong {
+      color: var(--primary);
+    }
+
+    .social {
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  .logocontainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 24px;
 
-    a {
+    .hmc,
+    .pt {
+      padding: 5px;
+      background-color: var(--primary);
+      border-radius: 12px;
+      
       img {
-        height: 80px;
+        height: 60px;
       }
+    }
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h4 {
+      color: var(--primary);
+      font-size: large;
+    }
+    
+    a {
+      color: var(--primary);
+      font-size: small;
     }
   }
 }
@@ -316,12 +356,11 @@ footer {
   }
 
   footer {
-    div {
-      a {
-        img {
-          height: 70px;
-        }
-      }
+    padding: 50px 20px;
+    gap: 50px;
+    
+    .logocontainer {
+      display: none;
     }
   }
 }

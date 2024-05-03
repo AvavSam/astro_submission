@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kabupaten Donggala</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/wisata.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <h2>E<span>x</span>plore<span>/</span></h2>
+        </a>
+      </div>
+      <div class="custom-select">
+        <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+          <span class="selected-value">Pilih Kabupaten</span>
+          <box-icon name="search"></box-icon>
+        </button>
+
+        <ul class="select-dropdown" role="listbox" id="select-dropdown">
+          <li role="option">
+            <input type="radio" id="poso" name="kabupaten" />
+            <label for="poso"
+              ><a href="poso.html"><img src="assets/Poso.png" alt="" />Kabupaten Poso</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="bangkep" name="kabupaten" />
+            <label for="bangkep"
+              ><a href="bangkep.html"><img src="assets/bangkep.png" alt="" />Kabupaten Banggai Kepulauan</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="tolitoli" name="kabupaten" />
+            <label for="tolitoli"
+              ><a href="tolitoli.html"><img src="assets/Tolitoli.png" alt="" />Kabupaten Toli-Toli</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="donggala" name="kabupaten" />
+            <label for="donggala"
+              ><a href="donggala.html"><img src="assets/Donggala.png" alt="" />Kabupaten Donggala</a></label
+            >
+          </li>
+          <li role="option">
+            <input type="radio" id="sigi" name="kabupaten" />
+            <label for="sigi"
+              ><a href="sigi.html"><img src="assets/Sigi.png" alt="" />Kabupaten Sigi</a></label
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- CONTENT -->
+    <main>
+      <div class="title">
+        <div class="judul">
+          <h4>Kabupaten Donggala</h4>
+          <h2>Tanjung Karang</h2>
+        </div>
+        <div class="rating">
+          <box-icon name="star" type="solid" size="cssSize"></box-icon>
+          <h4>4.8/5</h4>
+        </div>
+      </div>
+
+      <div class="cardholder">
+        <!-- bungkusan box 1, 2-->
+        <div class="card">
+          <!-- box 1 -->
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="assets/TanjungKarang.png" />
+            </div>
+
+            <div class="mySlides fade">
+              <img src="assets/tanjungkarang2.jpeg" />
+            </div>
+
+            <div class="mySlides fade">
+              <img src="assets/tanjungkarang3.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cardtext">
+        <p class="desc">
+          Tanjung Karang adalah objek wisata yang terletak di desa Labuan Bajo, Kabupaten Donggala, Sulawesi Tengah. Berjarak 37 km dari Kota Palu ibu kota Provinsi Sulawesi Tengah. Tanjung Karang memiliki pantai berpasir putih dengan
+          kekayaan hayati biota bawah laut.
+          <br /><br />
+          Wisata pada Pantai Tanjung Karang ini berupa selam permukaan (snorkeling) ataupun selam bebas. Terdapat 17 gugus karang yang tersebar dalam radius 20 km dari bibir pantai, antara lain Irmis Block, Natural Reef, Alex Point, Green
+          Wall, Rocky Point, Anchor Reef, dan House Reef. Bila ingin menginap, ada beragam cottage yang bisa dipilih dengan fasilitas yang bervariasi, antara lain adanya air panas dan lemari pendingin.
+        </p>
+        <div class="maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17961.61008451923!2d119.72755861447314!3d-0.645427103984782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bb777384cca4f%3A0xd07a4ad28625473e!2sDonggala%20Tanjung%20Karang%20Beach!5e0!3m2!1sid!2sid!4v1714717348345!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <!-- CONTENT END -->
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/wisata.js"></script>
+  </body>
+</html>
