@@ -317,6 +317,19 @@ main {
   }
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  background-color: var(--accent);
+  margin: 0px 92px;
+  border-radius: 12px 12px 0px 0px;
+
+  p {
+    color: var(--primary);
+  }
+}
+
 @media screen and (max-width: 767px) {
   nav {
     align-items: center;
@@ -381,5 +394,10 @@ main {
         }
       }
     }
+  }
+
+  footer {
+    margin: 0px 40px;
+    text-align: center;
   }
 }
